@@ -1,0 +1,40 @@
+// 1. Newton Second Law //
+STORE "massa" with any value
+STORE "kecepatan" with any value
+STORE "gaya" without any value
+
+Calculate "massa" times "kecepatan"
+SET "gaya" value with calculation result
+
+DISPLAY "gaya"
+
+
+// 2. Tahun Kabisat //
+IF "tahun" / 4 is 0
+ELSE IF "tahun" / 100 is 0
+ELSE IF "tahun" / 400 is 0
+  DISPLAY "Tahun Kabisat"
+ELSE
+  DISPLAY "Bukan Tahun Kabisat"
+
+
+// 3. Laundry Day //
+STORE "baju" to 0
+
+WHILE "baju" < 20
+  CALCULATE "baju" ADD "baju"
+  STORE "baju" to the result of calculation
+  IF "baju" equals to 20
+    DISPLAY "Cuci Pakaian"
+
+
+// 4. Periksa Buku //
+STORE "murid" to 0
+
+WHILE "murid" < 40
+    STORE "kuku" with any value
+    IF "kuku" equals to long
+      DO "Menghukum Murid"
+    ELSE
+      DO "Memuji Murid"
+    CALCULATE "murid" ADD "murid"
