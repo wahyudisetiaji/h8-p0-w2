@@ -1,40 +1,85 @@
-// 1. Newton Second Law //
-STORE "massa" with any value
-STORE "kecepatan" with any value
-STORE "gaya" without any value
+// 1. Newton Second Law
 
-Calculate "massa" times "kecepatan"
-SET "gaya" value with calculation result
+// Secara matematis hukum II Newton dirumuskan sebagai berikut: ΣF = m x a
+// ΣF = resultan gaya (Newton)
+// m = massa benda (kg)
+// a = percepatan benda (m/s2)
 
-DISPLAY "gaya"
+STORE "massa" WITH 600
+STORE "kecepatan" WITH 2
+STORE "newton" WITHOUT any value
+
+CALCULATE "massa" times "kecepatan"
+SET "newton" value WITH calculation result
+
+DISPLAY "newton"
+
+// 2. Tahun Kabisat
+
+// Dalam kalender Gregorian, tahun kabisat memiliki beberapa kriteria yaitu antara lain:
+
+//     Jika tahun habis di bagi 4 dan tidak habis di bagi 100, dan
+//     Jika tahun habis di bagi 4, habis di bagi 100 dan habis di bagi 400
 
 
-// 2. Tahun Kabisat //
-IF "tahun" / 4 is 0
-ELSE IF "tahun" / 100 is 0
-ELSE IF "tahun" / 400 is 0
-  DISPLAY "Tahun Kabisat"
+STORE "tahun" WITH any value
+
+IF "tahun" MODULE 4 equals 0 THEN
+  IF "tahun" MODULE 100 equals 0 THEN
+    IF "tahun" MODULE 400 equals 0 THEN
+        DO DISPLAY "TAHUN KABISAT"
+      ELSE
+        DO DISPLAY "BUKAN TAHUN KABISAT"
+  ELSE
+    DO DISPLAY "BUKAN TAHUN KABISAT"
 ELSE
-  DISPLAY "Bukan Tahun Kabisat"
+  DO DISPLAY "BUKAN TAHUN KABISAT"
 
 
-// 3. Laundry Day //
-STORE "baju" to 0
 
-WHILE "baju" < 20
-  CALCULATE "baju" ADD "baju"
-  STORE "baju" to the result of calculation
-  IF "baju" equals to 20
-    DISPLAY "Cuci Pakaian"
+// 3. Laundry Day
+
+// Foxie akan mencuci pakaiannya menggunakan mesin cuci.
+// Pakaian yang akan dicuci oleh Foxie sebanyak 20 dan akan dimasukkan ke mesin cuci.
+// Mesin cuci akan dinyalakan jika semua pakaian Foxie sudah masuk ke mesin cuci.
+
+STORE "baju" WITH 0
+STORE "max" WITH 20
 
 
-// 4. Periksa Buku //
-STORE "murid" to 0
+WHILE "baju" < "max" DO
+  IF "baju" equals 20 DO DISPLAY "MESIN CUCI DINYALAKAN!"
+  CALCULATE "baju" + 1 THEN DO
+END WHILE
 
-WHILE "murid" < 40
-    STORE "kuku" with any value
-    IF "kuku" equals to long
-      DO "Menghukum Murid"
-    ELSE
-      DO "Memuji Murid"
-    CALCULATE "murid" ADD "murid"
+
+// 4. Periksa Kuku
+
+// Seorang guru akan memeriksa kuku siswa-siswinya yang sebanyak 40 orang dengan cara
+// berkeliling kelas.
+// Jika guru menemukan siswa/siswi yang memiliki kuku yang panjang maka guru akan
+// menghukum siswa/siswi tersebut, jika tidak guru akan memuji siswa/siswi tersebut.
+
+STORE "murid" WITH 0
+STORE "banyakmurid" WITH 40
+STORE "kuku" WITH any value
+
+WHILE "murid" < "banyakmurid" DO
+  IF "kuku" equals "panjang"
+    DO DISPLAY "MENGHUKUM SISWA/SISWI"
+  ELSE
+    DO DISPLAY "MEMUJI SISWA/SISWI"
+  CALCULATE "murid" + 1 THEN
+END WHILE
+
+
+
+
+
+
+
+
+
+
+
+  
