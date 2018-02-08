@@ -1,12 +1,11 @@
-// [Exercises 9 Week 2] Berlatih Penggunaan Functions
-// Mengenal Penggunaan Function
+// FUNCTION
 // TUGAS 1
 
 function shoutOut() {
-  console.log("Halo Function!");
+  return 'Halo Function!'
 }
 
-console.log(shoutOut());
+console.log(shoutOut())
 
 
 // TUGAS 2
@@ -24,14 +23,14 @@ console.log(hasilPerkalian);
 
 // TUGAS 3
 
-function processSentence(name, age, address, hobby) {
-  return 'Nama saya ' + name + ', umur saya ' + age + ' tahun,' + ' alamat saya di ' + address + ' dan saya punya hobby yaitu ' + hobby + '!';
+function processSentence(nama, age, address, hobby) {
+  return 'Nama saya ' + nama + ', umur saya ' + age + ' tahun,' + ' alamat saya di ' + address + ' dan saya punya hobby yaitu ' + hobby + '!';
 }
 
-var name = 'Agus';
+var nama = 'Agus';
 var age = 30;
 var address = 'Jln. Malioboro, Yogjakarta';
 var hobby = 'gaming';
 
-var fullSentence = processSentence(name, age, address, hobby)
+var fullSentence = processSentence(nama, age, address, hobby)
 console.log(fullSentence);
