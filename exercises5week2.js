@@ -1,4 +1,5 @@
-// Exercises 5 - Week 2] Bermain dengan String di JavaScript
+// STRING
+
 // 1. Let's Form a Sentence
 
 var word = 'JavaScript';
