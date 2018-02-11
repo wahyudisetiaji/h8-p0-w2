@@ -24,6 +24,9 @@ while (indeks > limit2) {
   indeks -= increment;
 }
 
+
+
+
 // 2. Melakukan Looping Menggunakan For
 
 var indeks = 2;
@@ -54,7 +57,7 @@ for(indeks; indeks > limit2; indeks -= increment) {
 //     Apabila angka counter adalah angka ganjil, tuliskan GANJIL
 
 
-var num = 99;
+var num = 1;
 
 for(i = num; i <= 100; i++){
   if((i % 2) === 0){
@@ -73,7 +76,7 @@ for(i = num; i <= 100; i++){
 
 // Untuk pertambahan counter 2
 
-for(i = 1; i <=100; i+=2){
+for(i = 9; i <=100; i+=2){
   var counter = i;
   if((counter % 3)=== 0){
     console.log('3 KELIPATAN 3');
